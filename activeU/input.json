@@ -1,0 +1,92 @@
+{
+    "domain":[90,30],
+    "simSteps": 6000,
+    "warmUp": 12000,
+    "rFrame": 0,
+    "comment":"Active fluid",
+    "lc":0,
+	"tau":0.5,
+    "collOp":12,
+    "species":
+    [
+        {
+            "dens": 20.0,
+            "bs": 0.0,
+            "act": 0.3,
+            "mfpot": 10.0,
+            "oDist": 0,
+            "rfc": 0.01,
+            "shearSusc": 0.5,
+            "tumble": 2.0,
+            "sigWidth": 0.5,
+            "sigPos": 0.4,
+            "damp": 0.0
+        }
+    ],
+    "BC":
+    [
+        {
+            "comment":"Bottom wall",
+            "phantom":1,
+            "aInv":[0,1,0],
+            "P":[1,1,1,1],
+            "R":0,
+            "DN":0,
+            "MVN":-1,
+            "MVT":-1,
+            "MUN":0,
+            "MUT":1
+        },
+		{
+            "comment": "Top wall",
+            "phantom": 1,
+            "Q": [0, 30, 0],
+            "aInv": [0, -1, 0],
+            "P": [1, 1, 1, 1],
+            "R": 0,
+            "DN": 0,
+            "MVN": -1,
+            "MVT": -1
+		},
+		{
+            "comment":"Left wall",
+            "phantom":1,
+            "aInv":[1,0,0],
+            "P":[1,1,1,1],
+            "R":0,
+            "DN":0,
+            "MVN":-1,
+            "MVT":-1,
+            "MUN":0,
+            "MUT":1
+        },
+		{
+            "comment":"Right wall",
+            "phantom":1,
+            "aInv":[-1,0,0],
+            "P":[1,1,1,1],
+            "R":-90,
+            "DN":0,
+            "MVN":-1,
+            "MVT":-1,
+            "MUN":0,
+            "MUT":1
+        }
+		
+    ],
+	"densOut":10,
+    "dirSOut": 10,
+	"debugOut": 3,
+    "flowOut": 100,
+    "pressureOut": 0,
+    "avVelOut": 10,
+    "energyOut": 10,
+    "synopsisOut": 1,
+    "checkpointOut": 0,
+    "domainWalls": 1,
+	"grav": [
+        0,
+        0.03,
+        0
+    ]
+}
